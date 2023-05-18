@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class App{
+public class App {
     public static void main(String[] args) {
+        Var eq = new Var();
         Scanner sc = new Scanner(System.in);
         int dividendo, divisor;
         double resultado;
@@ -12,11 +13,7 @@ public class App{
             System.out.print("Digite o divisor: ");
             divisor = sc.nextInt();
 
-            if (divisor == 0) {
-                throw new ArithmeticException("Não é possível dividir por zero!");
-            }
-
-            resultado = (double) dividendo / divisor;
+            resultado = eq.dividir(dividendo, divisor);
 
             System.out.printf("Resultado: %.2f", resultado);
 
